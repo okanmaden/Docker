@@ -25,8 +25,18 @@ de gerekecek olan bir kullanım yüzdesi olduğundan tam kapasite verimi sağlam
 - Container VM'e göre daha hızlı başlatılır. Uygulama izolasyonu sağlar. VM ise sistem izolasyonu sağlar.
 - Container daha taşınabilirdir.
 ## Temel Docker Komutları
+- Öncelikle Docker'ın sisteme düzgün yüklenip yüklenilmediğinin test edilmesi önemlidir.
+
+![docker hello world proof for correct installation](https://user-images.githubusercontent.com/99764271/167263255-ac9f6f65-9427-45a4-8ce9-d79df93ea400.PNG)
+
+" run hello-world" komutu ile bunu görüldüğü gibi test edebiliriz.(working correctly)
+
 - Help Komutu
 
 ![help komutu](https://user-images.githubusercontent.com/99764271/167263162-6dbfa539-660b-46d7-83cf-b917270b4142.PNG)
 
 bu komut ile eğer komutlardan birinin ismi ya da işlevi unutulduysa yardım alınabilir.
+
+- Container oluşturmak
+
+
