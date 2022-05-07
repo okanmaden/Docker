@@ -27,3 +27,6 @@ de gerekecek olan bir kullanım yüzdesi olduğundan tam kapasite verimi sağlam
 ## Temel Docker Komutları
 - Help Komutu
 
+![help komutu](https://user-images.githubusercontent.com/99764271/167263162-6dbfa539-660b-46d7-83cf-b917270b4142.PNG)
+
+bu komut ile eğer komutlardan birinin ismi ya da işlevi unutulduysa yardım alınabilir.
