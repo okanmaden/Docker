@@ -24,3 +24,6 @@ de gerekecek olan bir kullanım yüzdesi olduğundan tam kapasite verimi sağlam
 
 - Container VM'e göre daha hızlı başlatılır. Uygulama izolasyonu sağlar. VM ise sistem izolasyonu sağlar.
 - Container daha taşınabilirdir.
+## Temel Docker Komutları
+- Help Komutu
+
