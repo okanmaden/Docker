@@ -11,7 +11,7 @@ durumundan dolayıydı. Bu sistem verim açısından kötüydü çünkü kapasit
 
 - Buna çözüm olarak sanallaştırma(VM) getirildi. Bu sayede tek bir sunucu üstüne birden fazla işletim sistemi kurulup bu işletim sistemlerine
 ayrı ayrı uygulamalar kurularak birbirlerinden izole bir şekilde çalışabilmeleri sağlandı fakat işletim sistemlerinin temel gereksinimleri için
-de gerekecek olan bir kullanım yüzdesi olduğundan tam kapasite verimi sağlamıyordu.Bu durumun üstüne de **containerlar** geliştirildi.
+de gerekecek olan bir kullanım yüzdesi olduğundan tam kapasite verimi sağlamıyordu. Bu durumun üstüne de **containerlar** geliştirildi.
 
 - 2013 **Docker** kuruldu. Container konseptinin dünya da büyük ilgi çekmesini sağladı.
 
