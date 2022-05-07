@@ -43,3 +43,8 @@ bu komut ile eğer komutlardan birinin ismi ya da işlevi unutulduysa yardım al
 
 container oluşturulduktan sonra start komutu ile çalıştırılması gerekmektedir fakat kısayol olarak "container run" komutu ile yapılmaktadır.
 
+- Çalışan ve çalışıp kapanmış containerları gözlemleme
+
+![çalışma kapanma süreleri](https://user-images.githubusercontent.com/99764271/167263451-c8463e52-e694-4886-bb5c-29bde395ad29.png)
+
+"container ls " çalışmaya devam eden containerları gösterirken "container ls -a" hem çalışmaya devam eden hem de kapanan containerları göstermektedir.
