@@ -45,6 +45,6 @@ container oluşturulduktan sonra start komutu ile çalıştırılması gerekmekt
 
 - Çalışan ve çalışıp kapanmış containerları gözlemleme
 
-![çalışma kapanma süreleri](https://user-images.githubusercontent.com/99764271/167263451-c8463e52-e694-4886-bb5c-29bde395ad29.png)
+![ls komutu](https://user-images.githubusercontent.com/99764271/167263534-463b6d1e-9452-4123-9a9a-ddc5d66aaac1.png)
 
 "container ls " çalışmaya devam eden containerları gösterirken "container ls -a" hem çalışmaya devam eden hem de kapanan containerları göstermektedir.
