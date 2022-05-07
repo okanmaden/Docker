@@ -39,4 +39,7 @@ bu komut ile eğer komutlardan birinin ismi ya da işlevi unutulduysa yardım al
 
 - Container oluşturmak
 
+![container yaratmak app1](https://user-images.githubusercontent.com/99764271/167263357-c22ab701-4347-4fc8-8c64-67dac9afcafe.PNG)
+
+container oluşturulduktan sonra start komutu ile çalıştırılması gerekmektedir fakat kısayol olarak "container run" komutu ile yapılmaktadır.
 
