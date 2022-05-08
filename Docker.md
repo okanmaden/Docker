@@ -91,6 +91,7 @@ tek bir bütün gibi çalışmasının sağlandığı bir docker dosyasıdır.
 
 - Volume ile Container bağlantıları
 
+![okanekledi](https://user-images.githubusercontent.com/99764271/167298619-97389692-efc3-4c37-9577-933f98016135.PNG)
 
 
 
