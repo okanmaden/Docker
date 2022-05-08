@@ -62,6 +62,9 @@ ayrıca 127.0.0.1 adresine gidildiğinde alınan feedback sayesinde containerın
 
 -Containera bağlanıp değişiklik yapmak
 
+![containerrefresh](https://user-images.githubusercontent.com/99764271/167298019-dd8b74e2-de09-4ace-9878-6d4044cd14b8.PNG)
+
+
 
 ### Notlar
 - Docker imagede birden fazla uygulama olabilir fakat container başlatıldığında otomatik çalışması içn tek bir uygulamannın çalışmasına izin verir.
