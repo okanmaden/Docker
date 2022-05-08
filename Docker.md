@@ -87,4 +87,10 @@ tek bir bütün gibi çalışmasının sağlandığı bir docker dosyasıdır.
 - Veri kaybını engellemek ve verileri depolamak ve erişilebilir yapmak için dockerdaki çözüm **Volumedir**.
 ### Volume oluşturmak
 
+![creating volume](https://user-images.githubusercontent.com/99764271/167298474-2c0288de-afc1-49fd-af6b-5d7fe091a627.PNG)
+
+- Volume ile Container bağlantıları
+
+
+
 
