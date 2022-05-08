@@ -93,5 +93,10 @@ tek bir bütün gibi çalışmasının sağlandığı bir docker dosyasıdır.
 
 ![okanekledi](https://user-images.githubusercontent.com/99764271/167298619-97389692-efc3-4c37-9577-933f98016135.PNG)
 
+- Volume,boş ve dolu olmasına göre Containerda kullanılması
 
+![boş dolu volume](https://user-images.githubusercontent.com/99764271/167298658-ea0aa549-3830-4339-90b3-dd5a8d4bd965.PNG)
 
+Eğer volume container içinde olmayan bir klasöre mount edilirse dosya oluşur ve oraya eklenir.
+Eğer var olan bir klasöre mount edilirse,volume boşsa klasördeki dosyalar volume'e aktarılır. Eğer volume doluysa
+volume içinde ne varsa klasörde de o dosyalar görülür.
