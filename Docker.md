@@ -59,3 +59,13 @@ container oluşturulduktan sonra start komutu ile çalıştırılması gerekmekt
 
 **-d** komutu ile container direkt arkaplanda çalışacak şekilde ayarlanmış olur. Terminaller eşlenmez.
 ayrıca 127.0.0.1 adresine gidildiğinde alınan feedback sayesinde containerın bu sistemde ayağa kaldırılmış olduğunu anlarız.
+
+-Containera bağlanıp değişiklik yapmak
+
+
+### Notlar
+- Docker imagede birden fazla uygulama olabilir fakat container başlatıldığında otomatik çalışması içn tek bir uygulamannın çalışmasına izin verir.
+- varsayılan uygulama çalıştıktan diğer çok sayıda uygulama çalıştırılabilir.
+- ek komut kullanmadan direkt olarak varsayılan uygulama çalışır fakat ek komutlar sayesinde başka uygulamalar da başlangıçta çalıştırılabilir.
+- Docker CLI : Engine ile REST API üzerinden haberleşir.
+- Docker Deamon : Esas işi yapan, container yaratıp çalıştırmayı sağlayan ana uygulamadır.
