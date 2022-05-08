@@ -48,3 +48,5 @@ container oluşturulduktan sonra start komutu ile çalıştırılması gerekmekt
 ![ls komutu](https://user-images.githubusercontent.com/99764271/167263534-463b6d1e-9452-4123-9a9a-ddc5d66aaac1.png)
 
 "container ls " çalışmaya devam eden containerları gösterirken "container ls -a" hem çalışmaya devam eden hem de kapanan containerları göstermektedir.
+
+- **docker rm $(docker ps -a -q)** komutu ile tüm durmuş containerlar kısayoldan silinir.
