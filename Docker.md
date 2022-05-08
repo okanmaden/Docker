@@ -66,7 +66,7 @@ ayrıca 127.0.0.1 adresine gidildiğinde alınan feedback sayesinde containerın
 
 ![aynen](https://user-images.githubusercontent.com/99764271/167298053-e1859203-2a0b-47b4-aeeb-0c9145ae55b1.PNG)
 
-çalışan bir containera exec komutu ile bağlanılır. sh ile containerın shelline bağlanılır. -it (--interactive -tty) ise terminal bağlantısı kurmaya yarar.
+çalışan bir containera **exec** komutu ile bağlanılır. **sh** ile containerın shelline bağlanılır. **-it** (--interactive -tty)ise terminal bağlantısı kurmaya yarar.
 yapılan işlemlerle de adres refresh edildiğinde eklenen veri görülmektedir.
 
 
@@ -76,3 +76,15 @@ yapılan işlemlerle de adres refresh edildiğinde eklenen veri görülmektedir.
 - ek komut kullanmadan direkt olarak varsayılan uygulama çalışır fakat ek komutlar sayesinde başka uygulamalar da başlangıçta çalıştırılabilir.
 - Docker CLI : Engine ile REST API üzerinden haberleşir.
 - Docker Deamon : Esas işi yapan, container yaratıp çalıştırmayı sağlayan ana uygulamadır.
+
+### Docker Katmanlı Dosya Sistemi
+- Docker depolama altyapısında unionfile system yapısını kullanır.
+- Docker imajı --> örneğin bir temel linux işletim sisteminin alınıp üstüne yapılan her değişikliğin dosya katmanı olarak tutulup sonunda bu katmanların
+tek bir bütün gibi çalışmasının sağlandığı bir docker dosyasıdır.
+- Imageden container yaratılmak istenirse R/O layers yani sadece okunabilir halde tutulup bunun üstüne R/W katmanı eklenir ve değişiklikler bu katman üstünde yapılır.
+
+## Volume
+- Veri kaybını engellemek ve verileri depolamak ve erişilebilir yapmak için dockerdaki çözüm **Volumedir**.
+### Volume oluşturmak
+
+
