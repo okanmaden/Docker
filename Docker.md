@@ -49,6 +49,12 @@ container oluşturulduktan sonra start komutu ile çalıştırılması gerekmekt
 
 "container ls " çalışmaya devam eden containerları gösterirken "container ls -a" hem çalışmaya devam eden hem de kapanan containerları göstermektedir.
 
-- **docker rm $(docker ps -a -q)** komutu ile tüm durmuş containerlar kısayoldan silinir.
-- **docker rm id** şeklinde de teker teker idler girip silinebilir fakat halihazırda çalışan containerları silmek için
+**docker rm $(docker ps -a -q)** komutu ile tüm durmuş containerlar kısayoldan silinir.
+**docker rm id** şeklinde de teker teker idler girip silinebilir fakat halihazırda çalışan containerları silmek için
 -f ile forced yapılması gerekmektedir.
+
+- Detach Mode 
+
+![detach mode](https://user-images.githubusercontent.com/99764271/167291955-2081776e-da64-4261-af34-6147173e3d93.PNG)
+
+**-d** komutu ile container direkt arkaplanda çalışacak şekilde ayarlanmış olur. Terminaller eşlenmez.
