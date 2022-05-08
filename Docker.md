@@ -64,6 +64,10 @@ ayrıca 127.0.0.1 adresine gidildiğinde alınan feedback sayesinde containerın
 
 ![containerrefresh](https://user-images.githubusercontent.com/99764271/167298019-dd8b74e2-de09-4ace-9878-6d4044cd14b8.PNG)
 
+![aynen](https://user-images.githubusercontent.com/99764271/167298053-e1859203-2a0b-47b4-aeeb-0c9145ae55b1.PNG)
+
+çalışan bir containera exec komutu ile bağlanılır. sh ile containerın shelline bağlanılır. -it (--interactive -tty) ise terminal bağlantısı kurmaya yarar.
+yapılan işlemlerle de adres refresh edildiğinde eklenen veri görülmektedir.
 
 
 ### Notlar
