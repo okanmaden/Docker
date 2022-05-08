@@ -50,3 +50,5 @@ container oluşturulduktan sonra start komutu ile çalıştırılması gerekmekt
 "container ls " çalışmaya devam eden containerları gösterirken "container ls -a" hem çalışmaya devam eden hem de kapanan containerları göstermektedir.
 
 - **docker rm $(docker ps -a -q)** komutu ile tüm durmuş containerlar kısayoldan silinir.
+- **docker rm id** şeklinde de teker teker idler girip silinebilir fakat halihazırda çalışan containerları silmek için
+-f ile forced yapılması gerekmektedir.
