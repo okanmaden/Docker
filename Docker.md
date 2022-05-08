@@ -58,3 +58,4 @@ container oluşturulduktan sonra start komutu ile çalıştırılması gerekmekt
 ![detach mode](https://user-images.githubusercontent.com/99764271/167291955-2081776e-da64-4261-af34-6147173e3d93.PNG)
 
 **-d** komutu ile container direkt arkaplanda çalışacak şekilde ayarlanmış olur. Terminaller eşlenmez.
+ayrıca 127.0.0.1 adresine gidildiğinde alınan feedback sayesinde containerın bu sistemde ayağa kaldırılmış olduğunu anlarız.
