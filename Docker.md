@@ -100,3 +100,10 @@ tek bir bütün gibi çalışmasının sağlandığı bir docker dosyasıdır.
 Eğer volume container içinde olmayan bir klasöre mount edilirse dosya oluşur ve oraya eklenir.
 Eğer var olan bir klasöre mount edilirse,volume boşsa klasördeki dosyalar volume'e aktarılır. Eğer volume doluysa
 volume içinde ne varsa klasörde de o dosyalar görülür.
+
+## Bind Mounts Metodu
+- Bind mounts host üstündeki bir dosya ya da klasörün containera mount edilmesini sağlar.
+- Örneğin; containerda kaydedilen verilerin normal bilgisayardaki bir dosyaya mount edilerek o verilerin bilgisayara her defa çekmek zorunda kalmadan kaydedilebilir.
+- Ya da güncellenen bir web sitesi son haline gelene kadar c diskinde bir dosyada tutulsun, bu klasörü web sunucu yazılımının oldugu containerın, bu sunucuya bakan dosyasına mount edilmesi ile her güncellemede ayrı bir container üretmektek zorunda kalmamayı sağlayabilir.
+- Fakat production ortamda kullanılması sakıncalıdır. Çünkü direkt host üzerindeki adres kullanıldığından farklı bir host kullanıldığında sıkıntı çıkarır.
+
