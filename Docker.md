@@ -112,5 +112,16 @@ volume içinde ne varsa klasörde de o dosyalar görülür.
 ![nginx](https://user-images.githubusercontent.com/99764271/167483390-d30e3c97-a1ec-4e7c-a32b-fe71e7b4a762.PNG)
 
 ![nginx browser](https://user-images.githubusercontent.com/99764271/167484063-b2f565aa-6ac3-47d3-aac3-bd1d595e7793.PNG)
+
 ### Disk c üzerindeki dosyanın containera mount edilmesi --> bind mount
+
 ![nginx2](https://user-images.githubusercontent.com/99764271/167484317-202133d1-e006-4b7e-b46a-219333f9e089.PNG)
+
+![merhaba](https://user-images.githubusercontent.com/99764271/167484575-2d9bd15e-1d72-442c-bc4e-238574d76373.PNG)
+
+### diskteki dosyada değişiklik yapılması halinde containerda da değişiklik olması (bind mount)
+
+![okancode](https://user-images.githubusercontent.com/99764271/167484607-fd13ef16-34f0-4d36-8253-e76d3fdad173.PNG)
+
+![okanbrowser](https://user-images.githubusercontent.com/99764271/167484622-817afb1b-f52e-4894-810b-2c993ae31a7a.PNG)
+
