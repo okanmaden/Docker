@@ -209,9 +209,9 @@ volume içinde ne varsa klasörde de o dosyalar görülür.
 
 ![-11](https://user-images.githubusercontent.com/99764271/167493777-ee2a3ba0-0c01-4d66-a429-b7a48749c718.PNG)
 
--12
--13
--14
--15
--16
--17
+- 12
+- 13
+- 14
+- 15
+- 16
+- 17
