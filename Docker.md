@@ -161,3 +161,57 @@ volume içinde ne varsa klasörde de o dosyalar görülür.
 17: Tüm çalışan container’ları silelim. 
 
 ## Alıştırma 1 Cevapları
+- 1
+
+![-1](https://user-images.githubusercontent.com/99764271/167493694-dd654397-38b1-426c-95e9-965e064b4c09.PNG)
+
+-2
+
+![-2](https://user-images.githubusercontent.com/99764271/167493707-8e905d26-29e0-4380-bb4e-bfedc977dc3e.PNG)
+
+-3
+
+![-3](https://user-images.githubusercontent.com/99764271/167493725-ccf6ebe7-8fe9-4009-b0db-7d3e5f72525b.PNG)
+
+-4
+
+![-4](https://user-images.githubusercontent.com/99764271/167493749-26040b26-ec1c-4cf7-bb2e-3a32ba82e3e4.PNG)
+
+-5
+
+![-5](https://user-images.githubusercontent.com/99764271/167493753-f9e3a135-5534-4af4-a597-896af28b9094.PNG)
+
+-6
+
+![-6](https://user-images.githubusercontent.com/99764271/167493755-94d1b38f-dff5-4bbc-89d7-61a77957393b.PNG)
+
+-7
+
+![-7](https://user-images.githubusercontent.com/99764271/167493758-b1bc575e-cd71-41b9-86cf-fca69a8a266e.PNG)
+
+![-7,1](https://user-images.githubusercontent.com/99764271/167493756-9894ea9e-472a-4c25-919d-7a1371a496c9.PNG)
+
+-8
+
+![-8](https://user-images.githubusercontent.com/99764271/167493760-eb02a8c8-b9a7-47d5-9e5b-e4f1a445beba.PNG)
+
+![-8,1](https://user-images.githubusercontent.com/99764271/167493759-bbad406b-7a07-40e5-8baa-61cfad6aa9fe.PNG)
+
+-9
+
+![-9](https://user-images.githubusercontent.com/99764271/167493763-e8c3e76d-3a0f-4bea-9f8b-ef2459f9ffbd.PNG)
+
+-10
+
+![-10](https://user-images.githubusercontent.com/99764271/167493743-949ca477-7079-430c-b69f-40ad7545f630.PNG)
+
+-11
+
+![-11](https://user-images.githubusercontent.com/99764271/167493777-ee2a3ba0-0c01-4d66-a429-b7a48749c718.PNG)
+
+-12
+-13
+-14
+-15
+-16
+-17
