@@ -111,3 +111,5 @@ volume içinde ne varsa klasörde de o dosyalar görülür.
 
 ![nginx](https://user-images.githubusercontent.com/99764271/167483390-d30e3c97-a1ec-4e7c-a32b-fe71e7b4a762.PNG)
 
+![nginx browser](https://user-images.githubusercontent.com/99764271/167484063-b2f565aa-6ac3-47d3-aac3-bd1d595e7793.PNG)
+
