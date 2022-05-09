@@ -107,3 +107,7 @@ volume içinde ne varsa klasörde de o dosyalar görülür.
 - Ya da güncellenen bir web sitesi son haline gelene kadar c diskinde bir dosyada tutulsun, bu klasörü web sunucu yazılımının oldugu containerın, bu sunucuya bakan dosyasına mount edilmesi ile her güncellemede ayrı bir container üretmektek zorunda kalmamayı sağlayabilir.
 - Fakat production ortamda kullanılması sakıncalıdır. Çünkü direkt host üzerindeki adres kullanıldığından farklı bir host kullanıldığında sıkıntı çıkarır.
 
+### nginx web sunucu yazılımından container yaratılması
+
+![nginx](https://user-images.githubusercontent.com/99764271/167483390-d30e3c97-a1ec-4e7c-a32b-fe71e7b4a762.PNG)
+
