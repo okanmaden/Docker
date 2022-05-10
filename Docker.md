@@ -258,5 +258,6 @@ network ve logs için de geçerlidir.
 
 ## None network
 
+![none](https://user-images.githubusercontent.com/99764271/167623091-799baa22-e30e-48bf-bf4e-6d1676e0194c.PNG)
 
-
+- görüldüğü üzere network sağlanamıyor.
