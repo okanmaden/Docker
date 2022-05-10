@@ -242,4 +242,21 @@ network ve logs için de geçerlidir.
 - Host network: Yaratılan docker container herhangi bir networke bağlanmaz network izolasyonu ortadan kalkar ve üstündeki çalıştığı makinenin ağ altyapısını kullanır.
 - None : herhangi bir network bağlantısı yoktur.
 
+### Docker oluşturulduğunda direkt kurulu olan networkler
+
+![1](https://user-images.githubusercontent.com/99764271/167622235-f959b577-ca5c-4094-bd05-c4b5b4e7fcf4.PNG)
+
+### Inspect komutu ile networkun detaylı bilgisinin görülmesi
+
+![2](https://user-images.githubusercontent.com/99764271/167622236-9422fb03-6329-4ab1-a1f6-d96f32dd3551.PNG)
+
+- **inspect** komutu bütün komutlar için detaylı bilgi istenildiğinde kullanılabilir.
+
+## Oluşturulan bir containerın içinden başka bir container ile haberleşmenin kurulabilmesi.(bridge)
+
+![containerlar arası haberleşme](https://user-images.githubusercontent.com/99764271/167622238-803500f3-a6ca-4f81-94b0-d41d61073ff6.PNG)
+
+## None network
+
+
 
