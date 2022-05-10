@@ -210,8 +210,21 @@ volume içinde ne varsa klasörde de o dosyalar görülür.
 ![-11](https://user-images.githubusercontent.com/99764271/167493777-ee2a3ba0-0c01-4d66-a429-b7a48749c718.PNG)
 
 - 12
+
+![-12](https://user-images.githubusercontent.com/99764271/167607974-60d0edf4-0665-4df2-8616-f968410c57dc.PNG)
+
 - 13
+
+![-13](https://user-images.githubusercontent.com/99764271/167607977-ddd49c18-cd6a-4b4d-8e97-76644e98d8dc.PNG)
+
 - 14
-- 15
-- 16
-- 17
+
+![-14](https://user-images.githubusercontent.com/99764271/167607970-c56e4628-cc5b-4915-a1b1-8ce925840544.PNG)
+
+- 15,16,17
+
+![16,17](https://user-images.githubusercontent.com/99764271/167607991-c039c2b0-d5c5-4549-8ce0-89e7733f95a9.PNG)
+
+![-15,-16,1](https://user-images.githubusercontent.com/99764271/167607995-7fb55cfa-f376-4b9b-be87-c48d1b15cb78.PNG)
+
+![-15,-16,1,2](https://user-images.githubusercontent.com/99764271/167607993-6463c4e9-6086-45b4-9020-df08e7c3bbf8.PNG)
