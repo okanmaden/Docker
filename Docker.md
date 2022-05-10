@@ -228,3 +228,18 @@ volume içinde ne varsa klasörde de o dosyalar görülür.
 ![-15,-16,1](https://user-images.githubusercontent.com/99764271/167607995-7fb55cfa-f376-4b9b-be87-c48d1b15cb78.PNG)
 
 ![-15,-16,1,2](https://user-images.githubusercontent.com/99764271/167607993-6463c4e9-6086-45b4-9020-df08e7c3bbf8.PNG)
+
+## Docker Network Objeleri
+
+- Örneğin Volume driverları volume yaratılıp kullanılmasını sağlar(local isimli driverda local bir ortamda bir volume yaratılır)
+Volumeler başka ortamda yaratılmak istenirse, o ortam için farklı driver kullanılır ve bu sayede o ortamda volume yaratılabilir. Aynı durum
+network ve logs için de geçerlidir.
+- Her network driverı, o driver ile oluşturulan ağ altyapısının nasıl davranacağını ve o ağa bağlı containerların ne şekilde haberleşebileceğini de belirler.
+- Bir sanal makinenin ağ altyapısı nasıl davranıyorsa, dockerda da bu durum aynıdır.
+- Docker'da tüm haberleşme altyapısı docker network objeleriyle sağlanır. Docker temel 5 network driverına sahiptir.
+- Bridge ( default network) , host , macvlan , none , overlay
+- Bridge network: birden fazla ağdan tek birleşik bir ağ yaratmaya yarar.
+- Host network: Yaratılan docker container herhangi bir networke bağlanmaz network izolasyonu ortadan kalkar ve üstündeki çalıştığı makinenin ağ altyapısını kullanır.
+- None : herhangi bir network bağlantısı yoktur.
+
+
