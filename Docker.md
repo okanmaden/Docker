@@ -269,4 +269,102 @@ network ve logs için de geçerlidir.
 - -p host port:container port şeklindedir. Aynı anda birden fazla port publish edilebilir.
 - UDP portu açmak için -p 53:53/udp . Defaultu TCP.
 
+![port publish](https://user-images.githubusercontent.com/99764271/167946037-0f9a5dc2-c058-4daa-a9c0-8d382111ca87.PNG)
+
+- play with docker üstünden yapıldı.
+
+- farklı bridge networkler kurulabilir. 
+- Gerekçeler : -Ayrı ayrı containerları farklı bridgelere bağlayarak izolasyon sağlanabilir, farklı subnet ihtiyacı duyulursa
+- yeni bir bridge network kurulursa containerlar birbirlerine isimleri üzerinden de ulaşabilir (dns mantığı)
+- eğer container varsayalın bridge e bağlıysa kesilemez kullanıcının yarattığına ise ister bağlanılır ister kesilir.
+
+![tanımıyor isimleri](https://user-images.githubusercontent.com/99764271/167944230-cca5975f-2471-46a6-a58c-957f314b0573.PNG)
+
+- görüldüğü gibi ayrı bridge network kurulmadığında containerların isimleriyle ping atılamıyor.
+
+![-2](https://user-images.githubusercontent.com/99764271/167944234-53e40125-02d4-42b4-ad72-b6ae8577852d.PNG)
+
+- kopru1 adında oluşturulan bridge networka okan ve resit adındaki containerların bağlanması
+
+![-3](https://user-images.githubusercontent.com/99764271/167944238-b8bf5e72-5dd5-488d-9a35-3e596f41ed2d.PNG)
+
+- docker network inspect komutu ile bu containerların bridge e bağlandığı görülüyor. 
+
+![-4](https://user-images.githubusercontent.com/99764271/167944241-35c152e1-df54-47b0-95df-5455baad0d1b.PNG)
+
+- artık containerlar arasında birbirlerinin isimleri ile ping atılabiliyor.
+
+![-5](https://user-images.githubusercontent.com/99764271/167944244-6b444a83-89f1-4ef5-a173-20e348dfa4a3.PNG)
+
+- subnet, range ve gateway aralıklarının özel olarak belirlenmesi
+
+![-6](https://user-images.githubusercontent.com/99764271/167944245-c179878c-e82d-4885-b9d2-b03fe9dc34c5.PNG)
+
+- yapılan işlemin çıktısı
+
+## LOGGING, DOCKER LOGS
+- logging: linuxta dosyalara kaydedilir. sistem logu: sistemin genel işleyişini aktarır.
+- linux sistemde,terminalde yazılan komut sonrası uygulamaya giriş stdin stdout ve stderr tarafından kontrol edilir.
+
+![-1](https://user-images.githubusercontent.com/99764271/167944333-0233f1c9-d91e-48e4-ac75-e9d943b93a5f.PNG)
+
+- basit bir containerın loglarının görülmesi
+
+![-2](https://user-images.githubusercontent.com/99764271/167944339-def09186-e5c1-4153-9872-ab82b5424e73.PNG)
+
+- normalde nginx log dosyaları access ve error adındaki log dosyalarına yazılır. Bunun dockerda komut satırında direkt olarak görebilmek için uygulanan metod.
+
+![-3](https://user-images.githubusercontent.com/99764271/167944308-c18110af-a38f-40f6-bb39-d7723f60963f.PNG)
+
+![-4](https://user-images.githubusercontent.com/99764271/167944312-805f6a73-02f3-42fe-8f25-23dc820f8fce.PNG)
+
+- oluşturulan containerdan sonra 127.0.0.1 adresinde refresh islemi yapılıp elde edilen log akışı.
+
+![-5](https://user-images.githubusercontent.com/99764271/167944318-19e5f1c2-36ec-43dc-b9e8-75055d4f54f0.PNG)
+
+- bazı log dosyalarında zaman belirtilmemiş olabilir bunu görebilmek için uygulanan komut.
+
+![-6](https://user-images.githubusercontent.com/99764271/167944321-c6229d38-8bd3-43d7-8986-ddeeb2ab1dbd.PNG)
+
+![-7](https://user-images.githubusercontent.com/99764271/167944325-08c76841-6118-43e9-8f52-667cb1f67714.PNG)
+
+- belirli bir zamana kadar olan logları görebilmek için uygulanan komut ve çıktısı.
+
+![-8](https://user-images.githubusercontent.com/99764271/167944328-ff5bc837-cc9a-441d-9e01-68a0f54b3ddf.PNG)
+
+- belirli sayıda son satırı görmek için uygulanan komut ve çıktısı ( bu durum için son 2 satır )
+
+![-9](https://user-images.githubusercontent.com/99764271/167944330-a7a2c537-a721-4e67-9761-ec8d7dfc3fbc.PNG)
+
+- canlı bir şekilde akışı görebilmek için uygulanan komut. Yani sayfa yenilendiğinde anında log bilgisi elde edebilmek için uygulanır(bu örnek için )
+
+![-10](https://user-images.githubusercontent.com/99764271/167944331-98440a62-aaa2-4850-bc5e-d192d32e65bc.PNG)
+
+- log driverı değiştirilmek istenirse uygulanan komut.( bu örnek için splunk driverı)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
