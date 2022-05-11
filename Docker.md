@@ -261,3 +261,12 @@ network ve logs için de geçerlidir.
 ![none](https://user-images.githubusercontent.com/99764271/167623091-799baa22-e30e-48bf-bf4e-6d1676e0194c.PNG)
 
 - görüldüğü üzere network sağlanamıyor.
+
+### Port Publishing
+
+- Dış dünyadan containerlara paket,bilgi ulaşmasını sağlar. Çünkü default olarak bu işlem yapılamamaktadır.
+- -p ya da --publish komutu ile yapılır
+- -p host port:container port şeklindedir. Aynı anda birden fazla port publish edilebilir.
+- UDP portu açmak için -p 53:53/udp . Defaultu TCP.
+
+
