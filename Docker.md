@@ -342,29 +342,74 @@ network ve logs için de geçerlidir.
 
 - log driverı değiştirilmek istenirse uygulanan komut.( bu örnek için splunk driverı)
 
+## Stats ve Top
+- Docker top : Containerın içine girmeden o containerda nelerin çalıştığını gösterir.
+- Docker stats : Temelde ne kadar cpu,ram vs. kullanıldığını gösterir.
 
+## Container CPU ve memeory limitleri
+- Containerlar default olarak, üzerlerinde çalıştıkları sistemin CPU ve memorylerini bir sınır olmadan kullanabilirler. Bu sebeple eğer bir container
+bir hata vb. sonucu çok fazla cpu ve memory kullanırsa diğer containerların çalışmasını engelleyebilir.
 
+- bunu sınırlamak için komutlar: **--memory = x (x=100m,1g..)**
 
+![default memory](https://user-images.githubusercontent.com/99764271/168274705-3b847f8c-d6c2-4bba-9029-5259ea24cdd3.PNG)
 
+![arrangedmemory](https://user-images.githubusercontent.com/99764271/168274706-17307aa7-29c8-4771-9055-19cebc18f23a.PNG)
 
+- **-- memory-sway= y(200m,2g..)** (eğer o depolama alanı biterse ekstra kullanım alanı sağlar).
 
+- Containera şu kadardan fazla işlemci gücü kullanma şeklinde bir komut verilemez bunun yerine sistemdeki işlemci sayısından kısıtlama yapılabilir.
+- **--cpus="2"** ya da **--cpuset-cpus="1,4"** gibi.
 
+## Environment variables
+- işletim sisteminin tamamında geçerli olan ve her yerden çağırılabilen değişkenlerdir. Sistemdeki tüm environment variableların görünütülenebilmesi için;
+- **Get-ChildItem Env:** ,**printenv(linuxta)**
+- sadece belirli bir environment variable görmek için **$Env:[name], echo $ name(linuxta)**
+- **$Env:test="okan"** (test adında bir env. variable tanımlanıp değerinin okan olması), export test="okan"(linuxta)
 
+## Docker Environment Variable
+- image ya da containerlar yaratılırken tanımlanan değerlerdir.
+- **--env VAR1=deneme1,** **--env[name]**,**--env-file [dosya path]**
 
+### ALIŞTIRMA SORULARI 2
+- 1: İlk olarak sistemde bir temizlik yapalım ki alıştırmalarımızla çakışma olmasın. Varsa sistemdeki tüm containerları ve kullanıcı tanımlı bridge networkleri silelim.
+- 2: "alistirma-agi" adında ve 10.10.0.0/16 subnetinde, 10.10.10.0/24 ip-aralığından ip dağıtacak ve gateway olarak da 10.10.10.10 tanımlanacak bir kullanıcı tanımlı bridge network yaratalım. (bu sizin yerel ağınızda kullandığınız bir ağ aralığıysa başka bir cidr kullanabilirsiniz). Bu ağın özelliklerini inspect komutuyla kontrol edin. 
+- 3: nginx imajının 1.16 versiyonundan web1 adından detached bir container yaratın. Bu containerı default bridge networküne değil de alistirma-agi networküne bağlı olarak yaratın. Host'un 8080 tcp portuna gelen isteklerin bu containerın 80 portuna gitmesini sağlayın.
+- 4: Bu sisteme browser üzerinden erişin ve daha sonra bir kaç kez sayfayı refresh edin. Ardından bu container'ın loglarına erişerek az önceki erişimlerinizin loglarını kontrol edin. 
+- 5: Container loglarını follow modunda takip ederken browser'dan bu web sitesinde olmayan bir url'e gitmeye çalışın. Örneğin xyz.html Bunun ürettiği hatayı canlı olarak loglardan takip edin. 
+- 6: ozgurozturknet/adanzyedocker imajından test1 adından bir container yaratın. -dit ile yaratın sh shellini açın. Bu container default bridge network'e bağlı olsun. 
+- 7: Bu container'ı "alistirma-agi" networküne de bağlayın.
+- 8: Container'a attach işlemiyle bağlanın ve container içerisinden web1'i pinglemeye çalışın. Container'ı kapamadan çıkın. 
+- 9: Bu containerların çalıştığını kontrol edin ve ardından çalışıyor haldeyken bunları silin. 
+- 10: Terminalde eğitim klasörünün altındaki kisim4/bolum43 klasörüne geçin. 
+- 11: ozgurozturknet/webkayit imajından websrv adinda detached bir container yaratın. "alistirma-agi" networküne bağlı olsun. Maksimum 2 logical cpu kullanacak şekilde kısıtlansın. 80 portunu host üstündeki 80 portuyla publish edin. env.list dosyasının bu containera enviroment variable olarak aktarılmasını sağlayın. 
+- 12: ozgurozturknet/webdb imajından mysqldb adinda detached bir container yaratın. "alistirma-agi" networküne bağlı olsun. Maksimum 1gb memory kullanacak şekilde kısıtlansın. envmysql.list dosyasının bu containera enviroment variable olarak aktarılmasını sağlayın. 
+- 13: mysqldb containerının loglarını kontrol ederek düzgün şekilde başlatılabildiğini teyit edin. 
+- 14: Browser'dan websrv container'ının yayınladığı web sitesine bağlanın. Karşınıza çıkan formu doldurup bir tane jpg dosyayı da seçerek add tuşuna basın. Ardından kayitlari gör diyerek işlemin başarılı olduğunu teyit edin. 
+- 15: Oluşturduğunuz containerları ve alistirma-agi'ni silin.
 
+- 1,2,3,4,5
 
+![1,2,3,4,5](https://user-images.githubusercontent.com/99764271/168274789-ae6114fd-3bc8-416e-8470-01902e3060f2.PNG)
 
+![normal](https://user-images.githubusercontent.com/99764271/168274786-5b01fcc0-efb5-4686-b7b5-0918099b1c8f.PNG)
 
+![error site](https://user-images.githubusercontent.com/99764271/168274802-09d999df-eb4d-47ee-ac04-2f8d412ee5b7.PNG)
 
+- 6,7,8,9
 
+![6,7,8,9](https://user-images.githubusercontent.com/99764271/168274793-8e69808e-52c9-4f11-88a9-81ddc1ca48c6.PNG)
 
+- 10,11
 
+![10,11](https://user-images.githubusercontent.com/99764271/168276628-06d88472-7619-4320-9373-36cc03c994b7.PNG)
 
+- 13
 
+![13](https://user-images.githubusercontent.com/99764271/168274798-7065c76b-c640-459f-b1b3-a9412f63d989.PNG)
 
+- 14
 
+![14](https://user-images.githubusercontent.com/99764271/168274800-7cceeecd-0a43-4b13-9a8b-bbc2b7c348b5.PNG)
 
-
-
-
-
+![resitmaden](https://user-images.githubusercontent.com/99764271/168274788-3764b910-bb65-490b-aaab-b0f16d6b201b.PNG)
