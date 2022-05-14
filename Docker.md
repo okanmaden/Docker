@@ -413,3 +413,136 @@ bir hata vb. sonucu çok fazla cpu ve memory kullanırsa diğer containerların 
 ![14](https://user-images.githubusercontent.com/99764271/168274800-7cceeecd-0a43-4b13-9a8b-bbc2b7c348b5.PNG)
 
 ![resitmaden](https://user-images.githubusercontent.com/99764271/168274788-3764b910-bb65-490b-aaab-b0f16d6b201b.PNG)
+
+## IMAGE VE REGISTRY ALIŞTIRMALARI
+### ALIŞTIRMA SORULARI
+
+- 1: İlk olarak sistemde bir temizlik yapalım ki alıştırmalarımızla çakışma olmasın. 
+Varsa sistemdeki tüm containerları silelim. 
+
+- 2: Docker logout ve docker login komutlarını kullanarak hesabımızdan logout olup tekrar login olalım. 
+
+- 3: Önceden oluşturduğunuz ve saklamanız gereken imajlar var ise bunları docker hub'a gönderin 
+ve ardından sistemdeki tüm imajları silin
+
+- 4: Docker hub'da kendi hesabınız altinda "alistirma" adıyla public bir repository yaratın. 
+
+- 5: Centos imajının latest ve 7, ubuntu imajının latest, 18.04 ve 20.04, alpine imajının latest, 
+nginx imajının latest ve alpine tagli imajlarını sisteme çekin. 
+
+- 6: ubuntu:18.04 imajına dockerhubkullaniciadiniz/alistirma:ubuntu olarak tag ekleyin ve ardından bu yeni imajı 
+docker hub'a gönderin. Alistirma repository'inizden imajı check edin. 
+
+- 7:Bu alistirma.txt dosyasının olduğu klasörde bir Dockerfile oluşturun: 
+- Base imaj olarak nginx:latest imajını kullanın
+- İmaja LABEL="kendi adınız ve erişim bilgileriniz" şeklinde label ekleyiniz. 
+- KULLANICI adında bir enviroment variable tanımlayın ve değer olarak adınızı atayın
+- RENK adından bir build ARG tanımlayın
+- Sistemi update edin ve ardından curl, htop ve wget uygulamalarını kurun
+- /gecici klasörüne geçin ve https://wordpress.org/latest.tar.gz dosyasını buraya ekleyin
+- /usr/share/nginx/html klasörüne geçin ve html/${RENK}/ klasörünün içeriğini buraya kopyalayın
+- Healtcheck talimatı girelim. curl ile localhost'u kontrol etsin. Başlangıç periodu 5 saniye, deneme aralığı 30s ve
+zaman aşımı süresi de 30 saniye olsun. Deneme sayısı 3 olsun. 
+- Bu imajdan bir container yaratıldığı zaman ./script.sh dosyasının çalışmasını sağlayan talimatı exec formunda girin. 
+
+- 8: Bu Dockerfile dosyasından 2 imaj yaratın. Birinci imajda build ARG olarak RENK:kirmizi ikinci imajda da
+build ARG olarak RENK:sari kullanın. Kirmizi olan imajın tagi dockerhubkullaniciadiniz/alistirma:kirmizi 
+Sari olan imajin tagi dockerhubkullaniciadiniz/alistirma:sari olsun. 
+
+- 9: dockerhubkullaniciadiniz/alistirma:kirmizi imajını kullanarak bir container yaratın. Detach olsun.
+Makinenin 80 portuna gelen istekler bu containerın 80 portuna gitsin. Container adi kirmizi olsun.
+Browser'dan http://127.0.0.1 sayfasına gidip check edin.  
+
+- 10: dockerhubkullaniciadiniz/alistirma:sari imajını kullanarak bir container yaratın. Detach olsun.
+Makinenin 8080 portuna gelen istekler bu containerın 80 portuna gitsin.
+KULLANICI enviroment variable değerini "Deneme" olarak atayın. Container adi sari olsun. 
+Browser'dan http://127.0.0.1:8080 sayfasına gidip check edin.
+
+- 11: Containerları kapatıp silelim. 
+
+- 12: Bu alistirma.txt dosyasının olduğu klasörde Dockerfile.multi isimli bir Dockerfile oluşturun: 
+- Bu multi stage build alıştırması olacak. 
+- Birinci stage'i  mcr.microsoft.com/java/jdk:8-zulu-alpine imajından oluşturun ve stage adı birinci olsun
+- /usr/src/uygulama klasörüne geçin ve source klasörünün içeriğini buraya kopyalayın
+- "javac uygulama.java" komutunu çalıştırarak uygulamanızı derleyin
+- mcr.microsoft.com/java/jre:8-zulu-alpine imajından ikinci aşamayı başlatın. 
+- /uygulama klasörüne geçin ve birinci aşamadıki imajın /usr/src/uygulama klasörünün içeriğini buraya kopyalayın
+- Bu imajdan container yaratıldığı zaman "java uygulama" komutunun çalışması için talimat girin
+
+- 13: Bu Dockerfile.multi dosyasından dockerhubkullaniciadiniz/alistirma:java tagli bir imaj yaratın. 
+
+- 14: Bu imajdan bir container yaratın ve java uygulamanızın çıkardığı mesajı görün.
+
+- 15: dockerhubkullaniciadiniz/alistirma:kirmizi, dockerhubkullaniciadiniz/alistirma:sari, dockerhubkullaniciadiniz/alistirma:java
+imajlarını Docker hub'a yollayın. 
+
+- 16: Docker hub'daki registry isimli imajdan lokal bir Docker Registry çalıştırın. 
+
+- 17: dockerhubkullaniciadiniz/alistirma:kirmizi, dockerhubkullaniciadiniz/alistirma:sari, dockerhubkullaniciadiniz/alistirma:java
+imajlarını yeniden tagleyerek bu lokal registry'e gönderin ve ardından bu registry'nin web arayüzünden kontrol edin. 
+
+### CEVAPLAR
+
+- 1
+
+![1](https://user-images.githubusercontent.com/99764271/168448269-9c2f1894-b19f-4bed-9cf0-27c92946e830.PNG)
+
+- 2,3,4
+
+![2](https://user-images.githubusercontent.com/99764271/168448271-1a992bb2-a02d-438c-a6e8-63c2dbbee168.PNG)
+
+- 5
+
+![5](https://user-images.githubusercontent.com/99764271/168448272-b09db6cb-0e87-4ef1-85ad-a8565fc2759c.PNG)
+
+- 6
+![6](https://user-images.githubusercontent.com/99764271/168448273-10213f94-f725-4328-81b6-7f7ee9e83588.PNG)
+
+- 7
+
+![7](https://user-images.githubusercontent.com/99764271/168448274-020a4026-a1a1-41ab-bec0-92840ed9166f.PNG)
+
+- 8,9,10
+
+![8,1](https://user-images.githubusercontent.com/99764271/168448275-b95ac64c-f328-483f-b977-d3dc2d20edb5.PNG)
+
+![8,2](https://user-images.githubusercontent.com/99764271/168448277-2a147d62-8b31-4ba5-9742-63b4eb6fec00.PNG)
+
+![8,3](https://user-images.githubusercontent.com/99764271/168448278-cb692ca3-c768-404b-9bbf-22a22aaf2f4a.PNG)
+
+![8,4](https://user-images.githubusercontent.com/99764271/168448280-af94792c-eee1-4d68-9bb3-126703dadaa1.PNG)
+
+
+![9](https://user-images.githubusercontent.com/99764271/168448282-39b991f9-c892-44e9-ae21-d933896857df.PNG)
+
+![10](https://user-images.githubusercontent.com/99764271/168448285-f7f291ba-cf7b-4154-be36-41f66ff8b158.PNG)
+
+![10,1kod](https://user-images.githubusercontent.com/99764271/168448284-392032d6-9abc-46f5-bc17-344b8bab9eb0.PNG)
+
+![10,1](https://user-images.githubusercontent.com/99764271/168448283-65792b70-12e5-4095-b328-f6fcbd8c3d70.PNG)
+
+![10](https://user-images.githubusercontent.com/99764271/168448285-f7f291ba-cf7b-4154-be36-41f66ff8b158.PNG)
+
+- 12
+
+![12](https://user-images.githubusercontent.com/99764271/168448286-b1564b8a-ec27-478e-aff0-c87387254923.PNG)
+
+- 13
+
+![13](https://user-images.githubusercontent.com/99764271/168448261-985a6692-c6af-4e5b-9c3e-178005ce44cf.PNG)
+
+- 14
+
+![14](https://user-images.githubusercontent.com/99764271/168448263-bac520a2-8527-44fc-99b5-9b1f48d357d9.PNG)
+
+- 15
+
+![15](https://user-images.githubusercontent.com/99764271/168448265-73005ece-8ca3-4e5f-9f14-0853d559b55e.PNG)
+
+![15,1](https://user-images.githubusercontent.com/99764271/168448264-39d19cef-3ea7-4dc3-8ed2-050ecec48c87.PNG)
+
+- 16,17
+
+![16,17](https://user-images.githubusercontent.com/99764271/168448267-b609eb9d-894c-4fbe-84c2-fd93e865d75d.PNG)
+
+![17](https://user-images.githubusercontent.com/99764271/168448268-636a4795-2129-41c7-9576-01831c3e65b1.PNG)
