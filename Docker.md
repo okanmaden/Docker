@@ -546,3 +546,7 @@ imajlarını yeniden tagleyerek bu lokal registry'e gönderin ve ardından bu re
 ![16,17](https://user-images.githubusercontent.com/99764271/168448267-b609eb9d-894c-4fbe-84c2-fd93e865d75d.PNG)
 
 ![17](https://user-images.githubusercontent.com/99764271/168448268-636a4795-2129-41c7-9576-01831c3e65b1.PNG)
+
+
+
+![1_Dd7PiL5NMuWZ_dfTWDohLA](https://user-images.githubusercontent.com/99764271/181776798-fe3f9fdc-4859-4578-83b5-418de8b40cbd.jpeg)
